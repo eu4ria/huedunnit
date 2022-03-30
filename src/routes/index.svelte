@@ -58,7 +58,7 @@
 		bottom: $--size-4;
 		left: 50%;
 		display: flex;
-		gap: $--size-4;
+		// gap: $--size-1;
 		transform: translate(-50%);
 	}
 	button {
@@ -66,7 +66,7 @@
 		outline: none;
 		border: none;
 		background: none;
-		font-size: $--size-8;
+		font-size: $--size-6;
 		cursor: pointer;
 		transition-duration: $--transition-time;
 		transition-timing-function: cubic-bezier();
