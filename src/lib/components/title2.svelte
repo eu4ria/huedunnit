@@ -2,21 +2,20 @@
 	export let text;
 </script>
 
-<h1>{text}</h1>
+<h2>{text}</h2>
 
 <style lang="scss">
-	h1 {
+	h2 {
 		position: absolute;
-		// top: $--size-1;
-		// letter-spacing: 3px;
-		top:0;
-		color: $--colour-primary-300;
+		top: $--size-5;
+		color: $--colour-primary-400;
 
+		letter-spacing: 3px;
 		z-index: 10000;
-		padding: $--size-3 0;
+		padding: $--size-5;
 		max-width: 30ch;
 		text-transform: capitalize;
-		font-size: $--fontsize-6;
+		font-size: $--fontsize-4;
 
 		position: absolute;
 		left: 50%;

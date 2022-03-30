@@ -1,6 +1,7 @@
 <script>
 	import { colours } from '$lib/../stores';
 	import Title1 from '$lib/components/title1.svelte';
+	import Title2 from '$lib/components/title2.svelte';
 	let position = Math.floor(Math.random() * $colours.length);
 	let palette = $colours[position];
 	let m = { x: 0, y: 0 };
@@ -33,9 +34,10 @@
 </script>
 
 <Title1 text="Huedunnit" />
+<Title2 text={palette.name} />
 <section>
 	<div class="palette">
-		{#each palette as colour}
+		{#each palette.data as colour}
 			<div class="colour" data-text={colour.col} style={'background-color:' + colour.col + ';'} />
 		{/each}
 	</div>
@@ -71,8 +73,9 @@
 		transition-duration: $--transition-time;
 		transition-timing-function: cubic-bezier();
 		transition-property: all;
+        color: $--colour-primary-300;
 		&:hover {
-			color: $--colour-primary-500;
+			color: $--colour-primary-600;
 		}
 	}
 
@@ -96,28 +99,22 @@
 	.colour::after {
 		position: absolute;
 		content: attr(data-text);
-		width: 10%;
-		border-radius: $--size-2;
-		padding: $--size-8;
-		background-color: rgba(255, 255, 255, 0.25);
+		border-radius: $--size-1;
 		top: 50%;
 		left: 50%;
-		font-size: $--fontsize-2;
+		font-size: $--fontsize-1;
 		transform: translate(-50%, -50%);
-		opacity: 0;
 		text-transform: uppercase;
 		display: flex;
 		transition-duration: $--transition-time;
 		transition-timing-function: cubic-bezier();
 		transition-property: all;
 		align-items: center;
+		color: $--colour-primary-000;
 		justify-content: center;
-		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
-	}
-	.colour:hover {
-		width: 50%;
-	}
-	.colour:hover::after {
-		opacity: 1;
+		box-shadow: 0 2px 3px rgba(black, 0.5);
+		border: 2px solid $--colour-primary-300;
+		background-color: rgba(white, 0.25);
+		padding: $--size-1 $--size-1;
 	}
 </style>

@@ -1,10 +1,28 @@
 import { writable } from 'svelte/store';
 
 export const colours = writable([
-	[{ col: '#f00' }, { col: '#f44' }, { col: '#f88' }, { col: '#fbb' }, { col: '#fff' }],
-	[{ col: '#0f0' }, { col: '#4f4' }, { col: '#8f8' }, { col: '#bfb' }, { col: '#fff' }],
-	[{ col: '#00f' }, { col: '#44f' }, { col: '#88f' }, { col: '#bbf' }, { col: '#fff' }],
-	[{ col: '#ff0' }, { col: '#ff4' }, { col: '#ff8' }, { col: '#ffb' }, { col: '#fff' }],
-	[{ col: '#0ff' }, { col: '#4ff' }, { col: '#8ff' }, { col: '#bff' }, { col: '#fff' }],
-	[{ col: '#f0f' }, { col: '#f4f' }, { col: '#f8f' }, { col: '#fbf' }, { col: '#fff' }]
+    {
+        name: 'Reds',
+        data: [{ col: '#ff0000' }, { col: '#ff4444' }, { col: '#ff8888' }, { col: '#ffbbbb' }, { col: '#ffffff' }]
+    },
+    {
+        name: 'Greens',
+        data: [{ col: '#00ff00' }, { col: '#44ff44' }, { col: '#88ff88' }, { col: '#bbffbb' }, { col: '#ffffff' }]
+    },
+    {
+        name: 'bblues',
+        data: [{ col: '#0000ff' }, { col: '#4444ff' }, { col: '#8888ff' }, { col: '#bbbbff' }, { col: '#ffffff' }]
+    },
+    {
+        name: 'Yellowish',
+        data: [{ col: '#ffff00' }, { col: '#ffff44' }, { col: '#ffff88' }, { col: '#ffffbb' }, { col: '#ffffff' }]
+    },
+    {
+        name: 'Cyan',
+        data: [{ col: '#00ffff' }, { col: '#44ffff' }, { col: '#88ffff' }, { col: '#bbffff' }, { col: '#ffffff' }]
+    },
+    {
+        name: 'hotpink',
+        data: [{ col: '#ff00ff' }, { col: '#ff44ff' }, { col: '#ff88ff' }, { col: '#ffbbff' }, { col: '#ffffff' }]
+    }
 ]);
